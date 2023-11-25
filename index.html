@@ -1,23 +1,42 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tetris</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale='1.0'">
+    <link rel="stylesheet" href="style.css">
     <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f0f0f0;
-      }
+        body {
+            padding-bottom: 70px;
+        }
     </style>
-  </head>
-  <body>
-    <canvas id="gameCanvas" width="300" height="600" style="border: 1px solid black;"></canvas>
-    <script src="tetris.js"></script>
-  </body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Tetris</title>
+</head>
+<body>
+<main>
+  <div class="col-12 text-center">
+    <h1>Tetris</h1>
+    <h2 id="puntaje">Presiona <kbd>P</kbd> o pulsa el botón para comenzar</h2>
+</div>
+    <div class="container-fluid" style="display: flex; justify-content: center;">
+        <div class="row">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <canvas id="canvas" class="mt-5 pt-5" style="width: 17rem;"></canvas>
+                <div class="d-flex justify-content-evenly ">
+                    <button id="btnIniciar" class="btn btn-primary">Iniciar juego ("P")<i class="fas fa-play"></i></button>
+                    <button hidden id="btnPausar" class="btn btn-primary">Pausar juego ("P")<i class="fas fa-pause"></i></button>
+                    <button id="btnIzquierda" class="btn btn-primary">Izquierda<i class="fas fa-arrow-left"></i></button>
+                    <button id="btnAbajo" class="btn btn-primary">Abajo<i class="fas fa-arrow-down"></i></button>
+                    <button id="btnDerecha" class="btn btn-primary">Derecha<i class="fas fa-arrow-right"></i></button>
+                    <button id="btnRotar" class="btn btn-primary">Rotar<i class="fas fa-undo"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+</body>
+<script src="tetris.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>
